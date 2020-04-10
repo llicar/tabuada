@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Teste JS</title>
+
+	<style type="text/css">
+
+	fieldset{
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		width: 300px;
+		text-align: center;
+		border-radius: 10px;
+	}
+
+	button{
+		border-radius: 5px;
+		border:none;
+		width: 100px;
+		height: 25px;
+		font-weight: bold;
+		color: white;
+	}
+
+	.botao1{
+		background-color: #069;
+	}
+	.botao2{
+		background-color: red;
+	}
+		
+	</style>
+	
+	<script type="text/javascript">
+		function calcular(){
+			
+			var num= parseFloat(document.getElementById("num").value);
+
+			for (var i=1;i<=10;i++){
+				var total= i*num;
+				document.getElementById("resposta"+i).innerHTML = num + "*" + i +"=" + total;
+			}
+		}
+
+			
+
+			
+		
+		
+	</script>
+</head>
+<body>
+
+	<form onsubmit="return false">
+		<fieldset><legend>Tabuada</legend>
+			<label>Digite Um Numero</label>&nbsp<input type="number" id="num" min="0"><br><br>
+			
+
+			<p id="resposta1">&nbsp;</p><br>
+			<p id="resposta2">&nbsp;</p><br>
+			<p id="resposta3">&nbsp;</p><br>
+			<p id="resposta4">&nbsp;</p><br>
+			<p id="resposta5">&nbsp;</p><br>
+			<p id="resposta6">&nbsp;</p><br>
+			<p id="resposta7">&nbsp;</p><br>
+			<p id="resposta8">&nbsp;</p><br>
+			<p id="resposta9">&nbsp;</p><br>
+			<p id="resposta10">&nbsp;</p><br>
+			
+			<button class="botao1" onclick="calcular();">CALCULAR</button>
+			<button class="botao2" onclick="window.location.reload();">APAGAR</button>
+
+
+		</fieldset>
+	</form>
+
+
+
+</body>
+</html>
